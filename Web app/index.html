@@ -1,0 +1,64 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <title></title>
+  <script src="script.js" defer=""></script>
+</head>
+<body>
+    <h2 class="backInfo"></h2>
+    <div class="gameoverContainer">
+        <h2>GAME OVER : (</h2>
+        <p class="finalSccore">Your sccore: <span>0</span></p>
+        <p>You are trash : D</p>
+        <button class="restartBtn">Play Again</button>
+    </div>
+    <canvas class="canvas1">
+    </canvas>
+    <div class="healthContainer">
+        <div class="healthBar back">
+            <h2>%<span>100</span></h2>
+        </div>
+        
+        <div class="healthBar front">
+        </div>
+    </div>
+    <div class="energyContainer">
+        <div class="energyBar back">
+          
+        </div>
+        <div class="energyBar front">
+        </div>
+    </div>
+    <div class="cardsContainer">
+        <div class="card" name="granade"><img src="granade.png">
+        </div>
+        <div class="card active" name="rock"><img src="rock.png">
+        </div>
+         <div class="card" name="mine"><img src="mine.png">
+        </div>
+    </div>
+    <h2 class="sccoreText">Sccore: <span>0</span>
+    </h2>
+    <h2 class="bestSccoreText">Best: <span>0</span></h2>
+    
+    <div class="canvasImages">
+        <img src="rock.png" id="rockImg">
+    <img src="download.png" id="enemyImg">
+    <img src="enemy2.png" id="fastAirplaneImg">
+    <img src="enemy4.png" id="invisiblePlaneImg">
+    <img src="explosions.png" id = "explosionsImg">
+    <img src="granade.png" id="granadeImg">
+    <img src="mine.png" id="mineImg">
+    <img src="laser.png" id="laserImg">
+    </div>
+    <script>
+        $(".card").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        })
+    </script>
+</body>
+</html>

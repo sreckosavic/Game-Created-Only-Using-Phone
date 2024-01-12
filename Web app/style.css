@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("background.jpg");
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.canvasImages img{
+    display: none;
+}
+
+.gameoverContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    transition: 0.5s;
+    flex-direction: column;
+    opacity: 0;
+    filter: blur(20px);
+    z-index: 1000000;
+    transform: translateX(-100%);
+}
+
+.gameoverContainer.active{
+    transform: translateX(0%);
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.gameoverContainer h2{
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.gameoverContainer button{
+    position: relative;
+    top: 30px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+}
+.canvas1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: 1s;
+}
+
+.healthContainer{
+    position: absolute;
+    left: 0%;
+    bottom: 5%;
+    display: flex;
+    width: 100%;
+}
+
+.healthContainer .healthBar{
+    position: absolute;
+    height: 30px;
+    font-size: 1.1em;
+    font-family: Sans-Serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.healthContainer .healthBar h2{
+    position: absolute;
+    z-index: 10;
+    color: #fff;
+}
+
+.healthContainer .healthBar.front{
+    background: #49be25;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.healthContainer .healthBar.back{
+    background: #333;
+    width: 100%;
+}
+
+.energyContainer{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+}
+
+.energyContainer .energyBar{
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    border-left: 2px solid #F4AC00;
+    height: 30px;
+}
+
+.energyContainer .energyBar.back{
+    width: 100%;
+    background: #333;
+}
+
+.energyContainer .energyBar.front{
+    width: 100%;
+    transition: 0.3s;
+    background: #FFBC00;
+}
+
+.cardsContainer{
+    position: absolute;
+    height: auto;
+    width: auto;
+    display: flex;
+    z-index: 1000;
+    bottom: 5%;
+    left: 0;
+}
+
+.cardsContainer .card{
+    position: relative;
+    transition: 0.5s;
+    margin-left: 0px;
+    transform: translateY(-0px);
+}
+
+.cardsContainer img{
+    display: block;
+    transition: 0.5s;
+    width: 60px;
+}
+
+.cardsContainer .card.active{
+    transform: translateY(-25px);
+}
+
+.sccoreText{
+    color: #fff;
+}
+
+.bestSccoreText{
+    color: #fff;
+    font-size: 1.5em;
+    color: #8BFF60;
+}
